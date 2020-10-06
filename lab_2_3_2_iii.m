@@ -20,6 +20,7 @@ for f=1:13
     % calculating gain
     
     % displaying answers
+    disp(frequencies(f));
     disp('Output Voltage V: ');
     disp(Vout);
 end
