@@ -18,14 +18,8 @@ for f=1:13
     Vout=Vin*ratio;
     
     % calculating gain
-    Gain=20*log(abs(Vout/Vin));
     
     % displaying answers
     disp('Output Voltage V: ');
     disp(Vout);
-    disp('Gain dB');
-    disp(Gain);
-    disp('Phase shift Rad');
-    disp(Phaseshft);
-    disp('_________________')
 end
