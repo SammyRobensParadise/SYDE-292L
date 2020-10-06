@@ -25,4 +25,7 @@ for f=1:13
     disp(Vout);
     disp('Gain dB');
     disp(Gain);
+    disp('Phase shift Rad');
+    disp(Phaseshft);
+    disp('_________________')
 end

@@ -17,10 +17,21 @@ for f=1:13
     disp(frequencies(f));
     Vout=Vin*ratio;
     
-    
+    % calculating gain
     Gain=20*log(abs(Vout/Vin));
-    disp('Output Voltage: ');
+    freq=frequencies(f);
+    % calculating phase shift
+    internal=2*pi*freq*R;
+    disp(internal)
+    disp(
+    PhaseSft=-atan(internal);
+    
+    % displaying answers
+    disp('Output Voltage V: ');
     disp(Vout);
-    disp('Gain in dB 20log(...)');
+    disp('Gain dB');
     disp(Gain);
+    disp('Phase shift Rad');
+    disp(PhaseSft);
+    disp('_________________')
 end
