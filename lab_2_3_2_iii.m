@@ -11,10 +11,10 @@ for f=1:13
     % get expression
     
     % calculating output voltage
-    Xc=((2*pi*frequencies(f)*C));
-    denom=sqrt((1)+(Xc^2));
-    ratio=Xc/denom;
-    disp(frequencies(f));
+    X=((2*pi*frequencies(f)*C*R));
+ 
+    denom=sqrt((1)+(X^2));
+    ratio=X/denom;
     Vout=Vin*ratio;
     
     % calculating gain
