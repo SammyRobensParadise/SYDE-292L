@@ -6,13 +6,21 @@ R=4700;
 C=0.033e-6;
 Vin=10;
 
-% loop through and calculate Vout
+% loop through and calculate Vout then display
 for f=1:13
+    % get expression
+    
+    % calculating output voltage
     Xc=((1)/(2*pi*frequencies(f)*C));
     denom=sqrt((R^2)+(Xc^2));
     ratio=Xc/denom;
     disp(frequencies(f));
     Vout=Vin*ratio;
+    
+    
+    Gain=20*log(abs(Vout/Vin));
+    disp('Output Voltage: ');
     disp(Vout);
-    fprintf(frequencies(f),' %d',Vout );
+    disp('Gain in dB 20log(...)');
+    disp(Gain);
 end

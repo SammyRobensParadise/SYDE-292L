@@ -8,10 +8,21 @@ Vin=10;
 
 % loop through and calculate Vout then display
 for f=1:13
+    % get expression
+    
+    % calculating output voltage
     Xc=((1)/(2*pi*frequencies(f)*C));
     denom=sqrt((R^2)+(Xc^2));
     ratio=Xc/denom;
     disp(frequencies(f));
     Vout=Vin*ratio;
+    
+    % calculating gain
+    Gain=20*log(abs(Vout/Vin));
+    
+    % displaying answers
+    disp('Output Voltage V: ');
     disp(Vout);
+    disp('Gain dB');
+    disp(Gain);
 end
