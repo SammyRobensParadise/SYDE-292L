@@ -17,7 +17,7 @@ for f=1:9
     denom=sqrt((R^2)+(Xc^2));
     ratio=Xc/denom;
     Vout=V*ratio;
-    Gain=(20)*(log(Vout/Vin));
+    Gain=(20)*(log10(Vout/Vin));
     % displaying answers
     disp(frequencies(f));
     disp('Output Voltage V into voltage divider: ');

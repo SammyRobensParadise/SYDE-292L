@@ -9,7 +9,7 @@ C4=47E-6;
 
 % equation
 Av=R3./((w*C4*R3*R2)+R3+R2);
-AvEq=20*log(Av);
+AvEq=20*log10(Av);
 
 % plot
 plot(w,AvEq);
