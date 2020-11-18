@@ -16,7 +16,7 @@ for f=1:13
     current_Omega_Squared=(current_Omega)^2;
     ratio=(Omega/Q);
     voltage_gain=abs((G*Omega_Squared)/(current_Omega_Squared+(ratio*current_Omega)+Omega_Squared));
-    dBGain=20*log10(voltage_gain);
+    dBGain=20*log10(abs(voltage_gain));
     disp('frequency Hz')
     disp(current_freq)
     disp('voltage Gain')
