@@ -1,6 +1,6 @@
 % Sammy Robens-Paradise
 % get array of frequencies
-freq = [100 200 300 400 500 600 700 800 900 1000 2000 4000 100000];
+freq = [100 200 300 400 500 600 700 800 900 1000 2000 4000 10000];
 
 % setup default values for equation
 Q=0.707;
