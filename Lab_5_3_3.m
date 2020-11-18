@@ -7,14 +7,14 @@ Q=0.707;
 FreqC=736;
 Omega=(2*pi*FreqC);
 Omega_Squared=(Omega)^2;
-disp(Omega)
+j=sqrt(-1);
 % loop through and calculate Vout then display
 for f=1:13
     current_freq=freq(f);
-    current_Omega =(2*pi*current_freq);
+    current_Omega =(j*2*pi*current_freq);
     current_Omega_Squared=(current_Omega)^2;
-    voltage_gain=(Omega_Squared)/((current_Omega_Squared)+(Omega/Q)+Omega_Squared);
-    dBGain=20*log10(voltage_gain);
+    voltage_gain=((Omega_Squared)/((current_Omega_Squared)+((Omega/Q)*((current_Omega_Squared)))+Omega_Squared));
+    dBGain=20*log10(abs(voltage_gain));
     disp('frequency Hz')
     disp(current_freq)
     disp('voltage Gain')
