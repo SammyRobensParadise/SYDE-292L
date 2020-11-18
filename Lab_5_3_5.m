@@ -15,12 +15,13 @@ for f=1:6
     current_freq=freq(f);
     current_Omega =(j*2*pi*current_freq);
     current_Omega_Squared=(current_Omega)^2;
-    voltage_gain=((neg_1_over_Rg_C*current_Omega)/(current_Omega_Squared+(current_Omega_Squared/(Rd*C))+one_over_R_C_Sqrd));
-    dBGain=20*log10(abs(voltage_gain));
+    disp(neg_1_over_Rg_C*2*pi*current_freq)
+    voltage_gain=abs((neg_1_over_Rg_C*2*pi*current_freq)/(current_Omega_Squared+(current_Omega_Squared/(Rd*C))+one_over_R_C_Sqrd));
+    dBGain=20*log10(voltage_gain);
     disp('frequency Hz')
     disp(current_freq)
     disp('voltage Gain')
-    disp(abs(voltage_gain));
+    disp(voltage_gain);
     disp('dB gain')
     disp(dBGain)
     disp('________________________')
